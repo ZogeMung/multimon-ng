@@ -13,3 +13,9 @@ jobs:
       run: mkdir build && cd build && cmake ..
     - name: make
       run: cd build && make
+      
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.6.2
+      with:
+        path: .
+        # The desired behavior if no files are found using the provided path.
